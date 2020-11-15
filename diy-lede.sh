@@ -7,7 +7,7 @@ rm -rf package/lean/luci-theme-argon
 # 除了第一行的#!/bin/bash不要动，其他的设置，前面带#表示不起作用，不带的表示起作用了（根据你自己需要打开或者关闭）
 #
 
-# 修改openwrt登陆地址,把下面的192.168.123.1修改成你想要的就可以了，其他的不要动
+# 修改openwrt登陆地址,把下面的192.168.1.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.199.1/g' package/base-files/files/bin/config_generate
 
 
@@ -33,7 +33,8 @@ git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-
 git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash  #clash出国软件
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan  #微信推送
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
-
+git clone -b lede https://github.com/updateing/minieap package/minieap  #minieap校园网认证_新
+git clone -b lede https://github.com/updateing/minieap package/minieap  #mentohust校园网认证加入V4
 
 #passwall出国软件
 svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
